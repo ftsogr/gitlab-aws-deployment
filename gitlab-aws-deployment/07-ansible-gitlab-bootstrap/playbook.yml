@@ -1,8 +1,0 @@
-
-- name: Install and configure GitLab CE
-  hosts: gitlab
-  become: yes
-  vars_files:
-    - group_vars/gitlab.yml
-  roles:
-    - gitlab
