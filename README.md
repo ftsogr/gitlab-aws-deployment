@@ -1,7 +1,6 @@
 # GitLab Deployment on AWS (Using OpenTofu + Ansible)
 
-This project guides you through deploying a **production-ready GitLab CE setup** on AWS using **OpenTofu** (Terraform fork) and **Ansible**. It follows a modular, transparent, and infrastructure-as-code-first approach inspired by [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way).
-
+This project guides you through deploying a **production-ready GitLab CE setup** on AWS using **OpenTofu** (Terraform fork) and **Ansible**.
 ---
 
 ## 🔧 What This Deploys
@@ -201,14 +200,6 @@ external_url: "https://your.gitlab.domain"
 ```
 
 Failing to update your domain will result in SSL and DNS issues.
-
----
-
-
-## Authors
-
-This project is inspired by [kelsey/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
-and follows a similar philosophy: **manual, transparent setup with modular automation**.
 
 ---
 
