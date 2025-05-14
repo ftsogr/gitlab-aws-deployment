@@ -1,25 +1,3 @@
-
-## 🌐 IMPORTANT: Set Your GitLab Domain First
-
-This project uses `gitlab.ftso.gr` as an example.
-
-🛠️ Before running any step, replace all references to this domain with your actual GitLab domain:
-
-- `07-ansible-gitlab-bootstrap/group_vars/gitlab.yml`
-- `02-dns-and-certificates/variables.tf`
-- Any SSL certs or Route 53 records
-
-Example replacement:
-
-```yaml
-external_url: "https://your.gitlab.domain"
-```
-
-Failing to update your domain will result in SSL and DNS issues.
-
-
-
-
 # GitLab Deployment on AWS (Using OpenTofu + Ansible)
 
 This project guides you through deploying a **production-ready GitLab CE setup** on AWS using **OpenTofu** (Terraform fork) and **Ansible**. It follows a modular, transparent, and infrastructure-as-code-first approach inspired by [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way).
@@ -206,6 +184,27 @@ Optional GitLab CLI/API-based automation or runner registration.
 
 ---
 
+## 🌐 IMPORTANT: Set Your GitLab Domain First
+
+This project uses `gitlab.ftso.gr` as an example.
+
+🛠️ Before running any step, replace all references to this domain with your actual GitLab domain:
+
+- `07-ansible-gitlab-bootstrap/group_vars/gitlab.yml`
+- `02-dns-and-certificates/variables.tf`
+- Any SSL certs or Route 53 records
+
+Example replacement:
+
+```yaml
+external_url: "https://your.gitlab.domain"
+```
+
+Failing to update your domain will result in SSL and DNS issues.
+
+---
+
+
 ## Authors
 
 This project is inspired by [kelsey/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -221,20 +220,3 @@ Kudos to the **Logicea DevOps Team**
 ---
 
 
----
-
-## 🌐 Custom Domain Note
-
-This configuration uses `gitlab.ftso.gr` as an example domain.
-
-🔁 **Before deploying**, replace it with your actual GitLab domain:
-- In `07-ansible-gitlab-bootstrap/group_vars/gitlab.yml`
-- In `02-dns-and-certificates/variables.tf`
-- In any security groups, ACM certs, or DNS records
-
-Example:
-```yaml
-external_url: "https://your.gitlab.domain"
-```
-
-Failing to update the domain will result in broken HTTPS or unreachable services.
