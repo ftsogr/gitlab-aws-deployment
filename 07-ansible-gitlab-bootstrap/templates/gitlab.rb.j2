@@ -1,0 +1,30 @@
+
+external_url '{{ external_url }}'
+
+gitlab_rails['object_store']['enabled'] = true
+gitlab_rails['object_store']['proxy_download'] = true
+gitlab_rails['object_store']['connection'] = {
+  'provider' => 'AWS',
+  'region' => '{{ s3_region }}',
+  'aws_access_key_id' => '{{ s3_access_key_id }}',
+  'aws_secret_access_key' => '{{ s3_secret_access_key }}'
+}
+
+{% for key, bucket in s3_buckets.items() %}
+gitlab_rails['object_store']['objects']['{{ key }}']['bucket'] = '{{ bucket }}'
+{% endfor %}
+
+gitlab_rails['db_adapter'] = 'postgresql'
+gitlab_rails['db_encoding'] = 'unicode'
+gitlab_rails['db_database'] = '{{ db_name }}'
+gitlab_rails['db_username'] = '{{ db_user }}'
+gitlab_rails['db_password'] = '{{ db_password }}'
+gitlab_rails['db_host'] = '{{ db_host }}'
+gitlab_rails['db_port'] = {{ db_port }}
+
+gitlab_rails['redis_host'] = '{{ redis_host }}'
+gitlab_rails['redis_port'] = {{ redis_port }}
+
+nginx['redirect_http_to_https'] = true
+nginx['ssl_certificate'] = '{{ ssl_cert_path }}'
+nginx['ssl_certificate_key'] = '{{ ssl_key_path }}'
