@@ -117,8 +117,6 @@ allowed_ssh_cidrs = ["your.office.ip/32"]
 - Never commit secrets or real AWS credentials.
 - Use AWS IAM roles or SSM Parameter Store for better security in production.
 
----
-
 
 ---
 
