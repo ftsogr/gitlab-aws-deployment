@@ -41,6 +41,3 @@ Make sure to review `variables.tf` in this directory and replace:
 - Your VPC/Subnet IDs if pulling from another module
 
 Use `terraform output` or OpenTofu equivalents to wire modules together.
-## Related Projects
-
-To extend this infrastructure with GitLab Runners on AWS Fargate using Kaniko, refer to the [gitlab-runners-aws-fargate-kaniko](https://github.com/ftsogr/gitlab-runners-aws-fargate-kaniko) repository.
