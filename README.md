@@ -67,6 +67,9 @@ Each module contains:
 
 - No secrets are hardcoded — use variables or secret managers.
 - You can extend this repo with Vault, ACM, or SSM Parameter Store for secure secret handling.
+- IAM Roles for EC2 Instances: Currently, the GitLab EC2 instance accesses AWS resources using static credentials. It's recommended to assign an IAM role to the EC2 instance with the necessary permissions. This approach eliminates the need for hardcoded credentials and leverages AWS's temporary security credentials, enhancing security.
+- Implement OpenID Connect (OIDC) for GitLab CI/CD: Instead of storing AWS credentials in GitLab CI/CD variables, consider configuring OIDC between GitLab and AWS. This setup allows GitLab to assume roles in AWS securely, reducing the risk associated with long-lived credentials.
+
 
 ---
 
