@@ -202,7 +202,11 @@ external_url: "https://your.gitlab.domain"
 Failing to update your domain will result in SSL and DNS issues.
 
 ---
+## Related Projects
 
+To extend this infrastructure with GitLab Runners on AWS Fargate using Kaniko, refer to the [gitlab-runners-aws-fargate-kaniko](https://github.com/ftsogr/gitlab-runners-aws-fargate-kaniko) repository.
+
+---
 ## 👏 Credits
 
 Kudos to the **Logicea DevOps Team**  
