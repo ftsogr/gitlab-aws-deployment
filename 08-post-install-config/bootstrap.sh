@@ -1,6 +1,6 @@
 
 #!/bin/bash
-# GitLab Post-Install Script (Improved)
+# GitLab Post-Install Script
 # This script configures GitLab after installation using its API.
 
 set -e
