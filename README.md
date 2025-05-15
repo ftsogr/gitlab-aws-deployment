@@ -1,6 +1,6 @@
 # GitLab Deployment on AWS (Using OpenTofu + Ansible)
 
-This project guides you through deploying a **production-ready GitLab CE setup** on AWS using **OpenTofu** (Terraform fork) and **Ansible**.
+This project guides you through deploying a **production-ready (100++ users and projects) GitLab CE setup** on AWS using **OpenTofu** (Terraform fork) and **Ansible**.
 ---
 
 ## 🔧 What This Deploys
@@ -69,13 +69,6 @@ Each module contains:
 - You can extend this repo with Vault, ACM, or SSM Parameter Store for secure secret handling.
 - IAM Roles for EC2 Instances: Currently, the GitLab EC2 instance accesses AWS resources using static credentials. It's recommended to assign an IAM role to the EC2 instance with the necessary permissions. This approach eliminates the need for hardcoded credentials and leverages AWS's temporary security credentials, enhancing security.
 - Implement OpenID Connect (OIDC) for GitLab CI/CD: Instead of storing AWS credentials in GitLab CI/CD variables, consider configuring OIDC between GitLab and AWS. This setup allows GitLab to assume roles in AWS securely, reducing the risk associated with long-lived credentials.
-
-
----
-
-## 🧠 Philosophy
-
-We believe in learning by building. This repo favors clarity over abstraction, and is designed to be **educational, modular, and production-adaptable**.
 
 
 ---
