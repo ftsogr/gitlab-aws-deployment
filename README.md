@@ -210,6 +210,4 @@ To extend this infrastructure with GitLab Runners on AWS Fargate using Kaniko, r
 Kudos to the **Logicea DevOps Team**  
 🌐 Visit [logicea.com](https://logicea.com) for more.
 
----
-
 
